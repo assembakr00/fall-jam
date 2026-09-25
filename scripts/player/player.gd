@@ -2,28 +2,45 @@ extends CharacterBody2D
 
 
 const SPEED = 800.0
-const JUMP_VELOCITY = -300.0
+const JUMP_VELOCITY = -350.0
 
 # Used to smooth the movement slightly
 var target_vel = Vector2(0, 0)
 # How fast the player can accelerate, not actually pixels per second squared
 var player_acceleration = 5
-# Max speed at which the player can fall
-var terminal_velocity = 700
 # Scales the speed at which you move vertically
-var vertical_scale = 12
+var vertical_scale = 7
+
+# If the player is moving at less than this speed, they are stopped
+var stopping_speed = 0.1
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	#if not is_on_floor():
-		#velocity += get_gravity() * delta
 	
 	# ALlow the player to move around
 	move(delta)
 	
+	print(get_animation_type())
 	
 	move_and_slide()
 
+func get_animation_type():
+	print("velocity is ", velocity)
+	
+	# Check if the player is stopped
+	if abs(velocity.length()) < stopping_speed:
+		return "idle"
+	
+	# Check if the player is falling
+	if velocity.y > stopping_speed:
+		return "fall"
+	
+	# Check if the player is jumping up
+	if velocity.y < -stopping_speed:
+		return "jump"
+	
+	# Check if the player is moving to the left or right
+	if abs(velocity.x) > stopping_speed:
+		return "move"
 
 func move(delta):
 	target_vel = Vector2.ZERO
@@ -33,6 +50,7 @@ func move(delta):
 		if Input.is_action_pressed("move_up"):
 			velocity.y = JUMP_VELOCITY * vertical_scale
 	else:
+		# Add gravity
 		velocity += get_gravity() * delta * vertical_scale
 	
 	if Input.is_action_pressed("move_left"):
