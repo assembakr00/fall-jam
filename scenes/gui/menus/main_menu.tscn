@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://ddtgjbsvdlkwe"]
+
+[ext_resource type="Script" uid="uid://dby6u4h5o2xky" path="res://scripts/gui/menus/main_menu.gd" id="1_xpnup"]
+
+[node name="Main Menu" type="Control" unique_id=670787540]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xpnup")
+
+[node name="Background" type="TextureRect" parent="." unique_id=842709896]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Play" type="Button" parent="." unique_id=829921900]
+layout_mode = 0
+offset_left = 429.0
+offset_top = 165.0
+offset_right = 677.0
+offset_bottom = 265.0
+theme_override_font_sizes/font_size = 32
+text = "Play"
+
+[node name="Exit" type="Button" parent="." unique_id=746495108]
+layout_mode = 0
+offset_left = 429.0
+offset_top = 405.0
+offset_right = 677.0
+offset_bottom = 505.0
+theme_override_font_sizes/font_size = 32
+text = "Exit"
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

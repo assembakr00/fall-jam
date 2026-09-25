@@ -1,3 +1,7 @@
 res://scripts/player/player.gd
 res://scenes/player/player.tscn
 res://scenes/objects/platform.tscn
+res://scripts/gui/menus/main_menu.gd
+res://scenes/gui/menus/main_menu.tscn
+res://scenes/gui/menus/play_menu.tscn
+res://scripts/gui/menus/play_menu.gd
