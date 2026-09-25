@@ -1,2 +1,9 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1790365350
+::res://::1790365954
+::res://assets/::1790365849
+::res://assets/player/::1790365856
+player_programmer_art.png::CompressedTexture2D::662554303303968642::1790365855::1790365856::1::::<><><>0<>0<>2936b2e4cef41c4ffede2a8a8e574c4b<>res://.godot/imported/player_programmer_art.png-5035a19234647b33f74ac1b6a4a144d6.ctex::
+::res://scenes/::1790365863
+::res://scenes/player/::1790365906
+player.tscn::PackedScene::4844204674744744285::1790365906::0::1::::<><><>0<>0<><>::
+::res://scripts/::1790365845

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cbatlw163lxtd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v5vfr"]
+size = Vector2(82, 204)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iytbh"]
+
+[node name="Player" type="CharacterBody2D" unique_id=1346119174]
+
+[node name="PlayerCollision" type="CollisionShape2D" parent="." unique_id=1246433015]
+shape = SubResource("RectangleShape2D_v5vfr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=793539911]
+sprite_frames = SubResource("SpriteFrames_iytbh")
