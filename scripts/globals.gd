@@ -1,5 +1,9 @@
 extends Node
 
+var can_interact_with_root = false
+
+var root_status = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -7,7 +11,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	can_interact_with_root = !root_status and can_interact_with_root
 
 var level_1_text = {
 	"0text": "Bla", 

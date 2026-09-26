@@ -1,6 +1,6 @@
 extends Node2D
 
-var touched_root = true
+var touched_root = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
