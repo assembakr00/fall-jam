@@ -14,6 +14,10 @@ config/name="Black Root"
 run/main_scene="uid://ddtgjbsvdlkwe"
 config/features=PackedStringArray("4.7")
 
+[autoload]
+
+globals="*uid://cww3ab6yxxjtb"
+
 [display]
 
 window/stretch/mode="canvas_items"

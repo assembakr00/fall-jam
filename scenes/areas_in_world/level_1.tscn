@@ -1,11 +1,18 @@
 [gd_scene format=3 uid="uid://cylp7i8gfour6"]
 
+[ext_resource type="Script" uid="uid://cmfe8mwbaphsv" path="res://scripts/areas_in_world/level_1.gd" id="1_hkc2u"]
 [ext_resource type="PackedScene" uid="uid://cbatlw163lxtd" path="res://scenes/player/player.tscn" id="1_weabw"]
 [ext_resource type="PackedScene" uid="uid://d15n4t6tpef1" path="res://scenes/objects/platform.tscn" id="2_pnpo3"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_v5vfr"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v5vfr"]
+size = Vector2(72, 124)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_eykrx"]
+
 [node name="Level1" type="Node2D" unique_id=2089379257]
+script = ExtResource("1_hkc2u")
 
 [node name="Background" type="Parallax2D" parent="." unique_id=453825426]
 scroll_scale = Vector2(0.5, 0.5)
@@ -24,3 +31,16 @@ position = Vector2(6, 190)
 
 [node name="Platform2" parent="." unique_id=797457684 instance=ExtResource("2_pnpo3")]
 position = Vector2(485, 191)
+
+[node name="BlackenedRoot" type="Area2D" parent="." unique_id=1559942445]
+position = Vector2(559, 100)
+
+[node name="RootCollision" type="CollisionShape2D" parent="BlackenedRoot" unique_id=1873649727]
+shape = SubResource("RectangleShape2D_v5vfr")
+
+[node name="RootSprite" type="Sprite2D" parent="BlackenedRoot" unique_id=1469242374]
+position = Vector2(-9.77514e-06, 0.49999887)
+scale = Vector2(72.00002, 125.00001)
+texture = SubResource("PlaceholderTexture2D_eykrx")
+
+[connection signal="body_entered" from="BlackenedRoot" to="." method="_on_blackened_root_body_entered"]

@@ -1,11 +1,12 @@
+Sprite2D
+CollisionShape2D
+Area2D
 TextureRect
 Parallax2D
-Sprite2D
 HSeparator
 RichTextLabel
 Button
 Camera2D
-CollisionShape2D
 StaticBody2D
 TileMapLayer
 AnimatedSprite2D
