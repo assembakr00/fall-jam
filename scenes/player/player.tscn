@@ -151,12 +151,12 @@ position = Vector2(-4.5, 2.000001)
 scale = Vector2(0.5, 0.50000006)
 shape = SubResource("RectangleShape2D_v5vfr")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=793539911]
+[node name="PlayerSprite" type="AnimatedSprite2D" parent="." unique_id=793539911]
 scale = Vector2(3.3749998, 3.3749995)
 sprite_frames = SubResource("SpriteFrames_iytbh")
 animation = &"idle"
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=291714380]
+[node name="Camera" type="Camera2D" parent="." unique_id=291714380]
 
 [node name="NarrativeBox" parent="." unique_id=369282519 instance=ExtResource("3_gmlin")]
 offset_left = -576.0

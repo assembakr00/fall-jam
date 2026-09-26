@@ -20,8 +20,10 @@ func _physics_process(delta: float) -> void:
 
 
 func _update_animation() -> void:
-	var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
-	animated_sprite.flip_h = velocity.x < 0
+	var animated_sprite: AnimatedSprite2D = $PlayerSprite
+	
+	turn_player(animated_sprite)
+	
 	var animation_type: String = get_animation_type()
 
 	if animated_sprite.animation != animation_type:
@@ -55,3 +57,10 @@ func move(delta):
 		target_vel[0] += movement_speed
 
 	velocity.x += (target_vel.x - velocity.x) / player_acceleration
+
+# Update the players direction
+func turn_player(animated_sprite):
+	if velocity.x < 0:
+		animated_sprite.flip_h = true
+	elif velocity.x > 0:
+		animated_sprite.flip_h = false
