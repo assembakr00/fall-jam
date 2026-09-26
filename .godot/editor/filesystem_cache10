@@ -1,5 +1,5 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1790430545
+::res://::1790448556
 ::res://assets/::1790428731
 ::res://assets/player/::1790430545
 player_programmer_art.png::CompressedTexture2D::662554303303968642::1790419793::1790420113::1::::<><><>0<>0<>2936b2e4cef41c4ffede2a8a8e574c4b<>res://.godot/imported/player_programmer_art.png-5035a19234647b33f74ac1b6a4a144d6.ctex::
@@ -11,8 +11,8 @@ Ve.png::CompressedTexture2D::8165005250376737541::1790419793::1790420113::1::::<
 dirt_tilemap.png::CompressedTexture2D::6407429725960029800::1790420964::1790421399::1::::<><><>0<>0<>b92d7ec31543688bca8fa37fa14dee3e<>res://.godot/imported/dirt_tilemap.png-b8f0a0135a2fc0f3b36fd5c63b24a245.ctex::
 root.png::CompressedTexture2D::4886729775195647104::1790428484::1790428732::1::::<><><>0<>0<>f171c46ca2a470a17ebd2e0fbe5fb487<>res://.godot/imported/root.png-9fcbc04c90dd02cef191c97e6d091db9.ctex::
 ::res://scenes/::1790419793
-::res://scenes/areas_in_world/::1790429161
-level_1.tscn::PackedScene::6481050141735305585::1790429161::0::1::::<><><>0<>0<><>::uid://cmfe8mwbaphsv::::res://scripts/areas_in_world/level_1.gd<>uid://cbatlw163lxtd::::res://scenes/player/player.tscn<>uid://cxj2ow0xk0grg::::res://assets/Tiles/dirt_tilemap.png<>uid://cbvfywuuac0am::::res://assets/Tiles/root.png
+::res://scenes/areas_in_world/::1790431532
+level_1.tscn::PackedScene::6481050141735305585::1790431532::0::1::::<><><>0<>0<><>::uid://cmfe8mwbaphsv::::res://scripts/areas_in_world/level_1.gd<>uid://cbatlw163lxtd::::res://scenes/player/player.tscn<>uid://cxj2ow0xk0grg::::res://assets/Tiles/dirt_tilemap.png<>uid://cbvfywuuac0am::::res://assets/Tiles/root.png
 ::res://scenes/gui/::1790419793
 narrative_box.gd::GDScript::5526806990969227264::1790422668::0::1::::<>Control<><>0<>0<><>::
 narrative_box.tscn::PackedScene::1168124693948506213::1790419793::0::1::::<><><>0<>0<><>::uid://ck0hx6o3oaksu::::res://scenes/gui/narrative_box.gd
@@ -21,8 +21,8 @@ main_menu.tscn::PackedScene::7409432214710706112::1790419793::0::1::::<><><>0<>0
 play_menu.tscn::PackedScene::3295662091183281074::1790419793::0::1::::<><><>0<>0<><>::uid://0rd56bl2unba::::res://scripts/gui/menus/play_menu.gd
 ::res://scenes/objects/::1790419793
 platform.tscn::PackedScene::266086631586329884::1790419793::0::1::::<><><>0<>0<><>::
-::res://scenes/player/::1790428532
-player.tscn::PackedScene::4844204674744744285::1790428532::0::1::::<><><>0<>0<><>::uid://cewi11la61nwd::::res://scripts/player/player.gd<>uid://dolgpc0l333rt::::res://assets/player/Ve.png<>uid://fdaxb4n2rt05::::res://assets/player/Ve-jump.png<>uid://qv33wtajxomn::::res://scenes/gui/narrative_box.tscn<>uid://b6ygnxa4o6xsb::::res://assets/player/Ve-run.png
+::res://scenes/player/::1790431378
+player.tscn::PackedScene::4844204674744744285::1790431283::0::1::::<><><>0<>0<><>::uid://cewi11la61nwd::::res://scripts/player/player.gd<>uid://dolgpc0l333rt::::res://assets/player/Ve.png<>uid://fdaxb4n2rt05::::res://assets/player/Ve-jump.png<>uid://qv33wtajxomn::::res://scenes/gui/narrative_box.tscn<>uid://b6ygnxa4o6xsb::::res://assets/player/Ve-run.png
 ::res://scripts/::1790419793
 globals.gd::GDScript::6364112415344078611::1790419793::0::1::::<>Node<><>0<>0<><>::
 ::res://scripts/areas_in_world/::1790419793
@@ -32,4 +32,4 @@ level_1.gd::GDScript::5625731843294749613::1790419793::0::1::::<>Node2D<><>0<>0<
 main_menu.gd::GDScript::7280915438842273152::1790419793::0::1::::<>Control<><>0<>0<><>::
 play_menu.gd::GDScript::1790052867870602822::1790419793::0::1::::<>Control<><>0<>0<><>::
 ::res://scripts/player/::1790419793
-player.gd::GDScript::5099546601753722147::1790419793::0::1::::<>CharacterBody2D<><>0<>0<><>::
+player.gd::GDScript::5099546601753722147::1790431445::0::1::::<>CharacterBody2D<><>0<>0<><>::

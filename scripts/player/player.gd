@@ -1,16 +1,15 @@
 extends CharacterBody2D
 
 
-const SPEED = 800.0
-const JUMP_VELOCITY = -350.0
+const SPEED = 700.0
+const RUN_SPEED = 1100.0
+const JUMP_VELOCITY = -520.0
+const GRAVITY_SCALE = 1.5
 
 # Used to smooth the movement slightly
 var target_vel = Vector2(0, 0)
 # How fast the player can accelerate, not actually pixels per second squared
 var player_acceleration = 5
-# Scales the speed at which you move vertically
-var vertical_scale = 7
-
 # If the player is moving at less than this speed, they are stopped
 var stopping_speed = 0.1
 
@@ -35,23 +34,24 @@ func get_animation_type() -> String:
 		return "jump"
 
 	if abs(velocity.x) > stopping_speed:
-		return "run"
+		return "run" if Input.is_action_pressed("sprint") else "move"
 
-	return "move"
+	return "idle"
 
 
 func move(delta):
 	target_vel = Vector2.ZERO
 
 	if is_on_floor():
-		if Input.is_action_pressed("move_up"):
-			velocity.y = JUMP_VELOCITY * vertical_scale
+		if Input.is_action_just_pressed("jump"):
+			velocity.y = JUMP_VELOCITY
 	else:
-		velocity += get_gravity() * delta * vertical_scale
+		velocity += get_gravity() * delta * GRAVITY_SCALE
 
+	var movement_speed := RUN_SPEED if Input.is_action_pressed("sprint") else SPEED
 	if Input.is_action_pressed("move_left"):
-		target_vel[0] += -SPEED
+		target_vel[0] -= movement_speed
 	if Input.is_action_pressed("move_right"):
-		target_vel[0] += SPEED
+		target_vel[0] += movement_speed
 
-	velocity += (target_vel - velocity) / player_acceleration
+	velocity.x += (target_vel.x - velocity.x) / player_acceleration
