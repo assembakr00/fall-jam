@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 	if passed_text:
 		if $NarratorTimer.time_left == 0:
 			var curr_dict = get_curr_text(passed_text, curr_step)
-			$NarratorTimer.start(curr_dict["time"])
+			change_time(curr_dict)
 			show_text(curr_dict)
 			curr_step += 1
 

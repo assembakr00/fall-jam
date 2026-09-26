@@ -24,8 +24,8 @@ func _physics_process(delta: float) -> void:
 	
 	var animation_type = get_animation_type()
 	
-	if animation_type == "move":
-		$AnimatedSprite2D.play("move")
+	if animation_type == "move" or animation_type == "jump" or animation_type == "fall":
+		$AnimatedSprite2D.play(animation_type)
 	
 	move_and_slide()
 

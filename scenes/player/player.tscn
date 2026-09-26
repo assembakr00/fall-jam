@@ -2,10 +2,31 @@
 
 [ext_resource type="Script" uid="uid://cewi11la61nwd" path="res://scripts/player/player.gd" id="1_dovo2"]
 [ext_resource type="Texture2D" uid="uid://dolgpc0l333rt" path="res://assets/player/Ve.png" id="2_gmlin"]
+[ext_resource type="Texture2D" uid="uid://fdaxb4n2rt05" path="res://assets/player/Ve-jump.png" id="2_lvxji"]
 [ext_resource type="PackedScene" uid="uid://qv33wtajxomn" path="res://scenes/gui/narrative_box.tscn" id="3_gmlin"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v5vfr"]
 size = Vector2(74, 151.99998)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_je7p5"]
+atlas = ExtResource("2_lvxji")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fm80t"]
+atlas = ExtResource("2_lvxji")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qek5x"]
+atlas = ExtResource("2_lvxji")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5gtgg"]
+atlas = ExtResource("2_lvxji")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h17s1"]
+atlas = ExtResource("2_lvxji")
+region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lvxji"]
 atlas = ExtResource("2_gmlin")
@@ -25,6 +46,31 @@ region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_iytbh"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_je7p5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fm80t")
+}],
+"loop": 1,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qek5x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5gtgg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h17s1")
+}],
+"loop": 1,
+"name": &"jump",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_lvxji")
@@ -54,7 +100,7 @@ shape = SubResource("RectangleShape2D_v5vfr")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=793539911]
 scale = Vector2(3.3749998, 3.3749995)
 sprite_frames = SubResource("SpriteFrames_iytbh")
-animation = &"move"
+animation = &"fall"
 autoplay = "move"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=291714380]
