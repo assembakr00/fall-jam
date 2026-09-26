@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://qv33wtajxomn"]
 
+[ext_resource type="Script" uid="uid://ck0hx6o3oaksu" path="res://scenes/gui/narrative_box.gd" id="1_y7k31"]
+
 [node name="NarrativeBox" type="Control" unique_id=369282519]
 layout_mode = 3
 anchors_preset = 15
@@ -7,12 +9,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_y7k31")
 
-[node name="NarraterText" type="RichTextLabel" parent="." unique_id=1309258030]
+[node name="NarratorText" type="RichTextLabel" parent="." unique_id=1309258030]
 layout_mode = 0
 offset_left = 123.0
 offset_top = 4.0
 offset_right = 1033.0
 offset_bottom = 161.0
 theme_override_font_sizes/normal_font_size = 32
-text = "Hello, this is a narrator text box"
+
+[node name="NarratorTimer" type="Timer" parent="." unique_id=149402662]

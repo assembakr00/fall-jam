@@ -19,7 +19,7 @@ func _physics_process(delta: float) -> void:
 	# ALlow the player to move around
 	move(delta)
 	
-	print(get_animation_type())
+	#print(get_animation_type())
 	
 	move_and_slide()
 
