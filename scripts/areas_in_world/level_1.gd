@@ -1,6 +1,6 @@
 extends Node2D
 
-var touched_root = false
+var touched_root = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -10,7 +10,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if touched_root:
-		$Player/NarrativeBox.passed_text = globals.level_1_text
+		$Player/NarrativeBox.curr_text = globals.level_1_text
 
 
 func _on_blackened_root_body_entered(body: Node2D) -> void:

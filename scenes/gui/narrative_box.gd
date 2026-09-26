@@ -1,6 +1,6 @@
 extends Control
 
-var passed_text = null
+var curr_text = null
 var curr_step = 0
 
 # Called when the node enters the scene tree for the first time.
@@ -10,35 +10,22 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if passed_text:
+	if curr_text:
 		if $NarratorTimer.time_left == 0:
-			var curr_dict = get_curr_text(passed_text, curr_step)
-			change_time(curr_dict)
-			show_text(curr_dict)
+			change_time(curr_text)
+			show_text(curr_text)
 			curr_step += 1
 
 # Update the text
 func show_text(text_dict):
-	if "text" in text_dict:
-		$NarratorText.text = text_dict["text"]
+	if str(curr_step) + "text" in text_dict:
+		$NarratorText.text = text_dict[str(curr_step) + "text"]
 	else:
 		return "No text found"
 
 # Start the timer
 func change_time(text_dict):
-	if "time" in text_dict:
-		$NarratorTimer.start(text_dict["time"])
+	if str(curr_step) + "time" in text_dict:
+		$NarratorTimer.start(text_dict[str(curr_step) + "time"])
 	else:
 		return "No time set"
-
-func get_curr_text(text, step):
-	var curr_text = text
-	
-	for i in range(step):
-		if "next" in curr_text:
-			curr_text = curr_text["next"]
-		else:
-			return "No more text"
-	
-	# Return the current text dict
-	return curr_text
