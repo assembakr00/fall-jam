@@ -1,3 +1,4 @@
+TileMapLayer
 Timer
 Sprite2D
 CollisionShape2D
@@ -9,6 +10,5 @@ RichTextLabel
 Button
 Camera2D
 StaticBody2D
-TileMapLayer
 AnimatedSprite2D
 CharacterBody2D
