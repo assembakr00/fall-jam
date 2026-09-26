@@ -4,3 +4,4 @@ res://scripts/globals.gd
 res://scripts/player/player.gd
 res://scenes/gui/narrative_box.tscn
 res://scenes/gui/narrative_box.gd
+res://scenes/player/player.tscn

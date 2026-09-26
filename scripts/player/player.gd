@@ -19,12 +19,18 @@ func _physics_process(delta: float) -> void:
 	# ALlow the player to move around
 	move(delta)
 	
-	#print(get_animation_type())
+	# Poitn the player in the correcct direction
+	$AnimatedSprite2D.flip_h = velocity.x < 0
+	
+	var animation_type = get_animation_type()
+	
+	if animation_type == "move":
+		$AnimatedSprite2D.play("move")
 	
 	move_and_slide()
 
 func get_animation_type():
-	print("velocity is ", velocity)
+	#print("velocity is ", velocity)
 	
 	# Check if the player is stopped
 	if abs(velocity.length()) < stopping_speed:
