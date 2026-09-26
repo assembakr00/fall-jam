@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://cmfe8mwbaphsv" path="res://scripts/areas_in_world/level_1.gd" id="1_hkc2u"]
 [ext_resource type="PackedScene" uid="uid://cbatlw163lxtd" path="res://scenes/player/player.tscn" id="1_weabw"]
-[ext_resource type="Texture2D" uid="uid://cxj2ow0xk0grg" path="res://assets/Tiles/dirt_tilemap.png" id="2_81law"]
-[ext_resource type="Texture2D" uid="uid://cbvfywuuac0am" path="res://assets/Tiles/root.png" id="3_ce23n"]
+[ext_resource type="Texture2D" uid="uid://cxj2ow0xk0grg" path="res://assets/tiles/dirt_tilemap.png" id="2_81law"]
+[ext_resource type="Texture2D" uid="uid://cbvfywuuac0am" path="res://assets/tiles/root.png" id="3_ce23n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ce23n"]
 texture = ExtResource("2_81law")
