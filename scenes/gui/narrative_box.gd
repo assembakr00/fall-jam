@@ -11,7 +11,17 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if passed_text:
-		print("Narrative Box has something")
+		if $NarratorTimer.time_left == 0:
+			var curr_dict = get_curr_text(passed_text, curr_step)
+			$NarratorTimer.start(curr_dict["time"])
+			show_text(curr_dict)
+			curr_step += 1
+
+func show_text(text_dict):
+	if "text" in text_dict:
+		$NarratorText.text = text_dict["text"]
+	else:
+		return "No text found"
 
 func get_curr_text(text, step):
 	var curr_text = text

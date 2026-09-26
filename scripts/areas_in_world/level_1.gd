@@ -9,7 +9,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if touched_root:
+		$Player/NarrativeBox.passed_text = globals.level_1_text
 
 
 func _on_blackened_root_body_entered(body: Node2D) -> void:
