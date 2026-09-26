@@ -1,8 +1,10 @@
+TextureRect
+Parallax2D
+Sprite2D
+HSeparator
 RichTextLabel
 Button
-TextureRect
 Camera2D
-Sprite2D
 CollisionShape2D
 StaticBody2D
 TileMapLayer
