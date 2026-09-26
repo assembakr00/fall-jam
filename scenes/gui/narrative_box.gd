@@ -17,11 +17,19 @@ func _process(delta: float) -> void:
 			show_text(curr_dict)
 			curr_step += 1
 
+# Update the text
 func show_text(text_dict):
 	if "text" in text_dict:
 		$NarratorText.text = text_dict["text"]
 	else:
 		return "No text found"
+
+# Start the timer
+func change_time(text_dict):
+	if "time" in text_dict:
+		$NarratorTimer.start(text_dict["time"])
+	else:
+		return "No time set"
 
 func get_curr_text(text, step):
 	var curr_text = text
